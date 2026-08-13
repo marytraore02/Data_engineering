@@ -1,0 +1,140 @@
+# ============================================================================
+# .gitignore — Data Engineering Monorepo (Root)
+# Règles globales communes à tous les sous-projets
+# ============================================================================
+
+# ─── Environment & Secrets (CRITIQUE — ne jamais versionner) ─────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+credentials.json
+service-account*.json
+secrets/
+
+# ─── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# ─── Java / Maven ────────────────────────────────────────────────────────────
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+dependency-reduced-pom.xml
+.flattened-pom.xml
+*.class
+*.jar
+!.mvn/wrapper/*.jar
+
+# ─── IDEs ────────────────────────────────────────────────────────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.code-workspace
+.classpath
+.project
+.settings/
+*.swp
+*.swo
+*~
+.kotlin
+
+# ─── Jupyter ─────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ─── Data Engineering — Données volumineuses ─────────────────────────────────
+data/
+raw_data/
+processed_data/
+staging/
+output/
+exports/
+tmp/
+temp/
+*.parquet
+*.avro
+*.orc
+*.json.gz
+*.csv.gz
+*.ndjson
+*.jsonl
+*.db
+*.sqlite
+*.sqlite3
+*.duckdb
+
+# ─── Apache Flink ────────────────────────────────────────────────────────────
+flink-checkpoints/
+flink-savepoints/
+flink-recovery/
+flink-logs/
+
+# ─── Apache Spark ────────────────────────────────────────────────────────────
+spark-warehouse/
+metastore_db/
+derby.log
+*.crc
+
+# ─── Apache Kafka ────────────────────────────────────────────────────────────
+kafka-logs/
+kafka-data/
+
+# ─── Apache Airflow ──────────────────────────────────────────────────────────
+airflow.db
+airflow.cfg
+airflow-webserver.pid
+
+# ─── Docker ──────────────────────────────────────────────────────────────────
+docker-volumes/
+.docker/
+
+# ─── Terraform ───────────────────────────────────────────────────────────────
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+!*.tfvars.example
+
+# ─── Testing & Coverage ─────────────────────────────────────────────────────
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+*.exec
+jacoco.exec
+
+# ─── Logs ────────────────────────────────────────────────────────────────────
+*.log
+*.log.*
+logs/
+
+# ─── OS Generated ───────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ─── Misc ────────────────────────────────────────────────────────────────────
+*.bak
+*.backup
+*.orig
+*.tmp
+.cache/
+.mypy_cache/
+.ruff_cache/

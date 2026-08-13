@@ -1,0 +1,123 @@
+# ============================================================================
+# .gitignore — Python Data Engineering Project
+# ============================================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+credentials.json
+service-account*.json
+secrets/
+
+# IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.code-workspace
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data Engineering — Données volumineuses
+data/
+raw_data/
+processed_data/
+output/
+tmp/
+temp/
+*.csv
+*.tsv
+*.parquet
+*.avro
+*.orc
+*.json.gz
+*.csv.gz
+*.ndjson
+*.jsonl
+!requirements.txt
+*.db
+*.sqlite
+*.sqlite3
+*.duckdb
+
+# Apache Spark
+spark-warehouse/
+metastore_db/
+derby.log
+*.crc
+
+# Apache Flink
+flink-checkpoints/
+flink-savepoints/
+flink-logs/
+
+# Apache Kafka
+kafka-logs/
+kafka-data/
+
+# Apache Airflow
+airflow.db
+airflow.cfg
+logs/
+airflow-webserver.pid
+
+# Docker
+docker-volumes/
+.docker/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+!*.tfvars.example
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Logs
+*.log
+*.log.*
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Misc
+*.bak
+*.backup
+*.orig
+*.tmp
+.cache/
+.mypy_cache/
+.ruff_cache/

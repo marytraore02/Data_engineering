@@ -1,0 +1,119 @@
+# ============================================================================
+# .gitignore — Java/Maven Data Engineering Project (Flink + Kafka)
+# ============================================================================
+
+# ─── Maven Build ─────────────────────────────────────────────────────────────
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+dependency-reduced-pom.xml
+buildNumber.properties
+.flattened-pom.xml
+.kotlin
+
+# ─── IntelliJ IDEA ──────────────────────────────────────────────────────────
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# ─── Eclipse ─────────────────────────────────────────────────────────────────
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# ─── NetBeans ────────────────────────────────────────────────────────────────
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ─── VS Code ────────────────────────────────────────────────────────────────
+.vscode/
+*.code-workspace
+
+# ─── Environment & Secrets ───────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+credentials.json
+service-account*.json
+secrets/
+
+# ─── Data Engineering — Données & Artefacts ──────────────────────────────────
+data/
+raw_data/
+processed_data/
+output/
+tmp/
+temp/
+*.csv
+*.tsv
+*.parquet
+*.avro
+*.orc
+*.json.gz
+*.csv.gz
+*.ndjson
+*.jsonl
+*.db
+*.sqlite
+*.sqlite3
+
+# ─── Apache Flink ────────────────────────────────────────────────────────────
+flink-checkpoints/
+flink-savepoints/
+flink-recovery/
+flink-logs/
+
+# ─── Apache Spark ────────────────────────────────────────────────────────────
+spark-warehouse/
+metastore_db/
+derby.log
+*.crc
+
+# ─── Apache Kafka ────────────────────────────────────────────────────────────
+kafka-logs/
+kafka-data/
+
+# ─── Docker ──────────────────────────────────────────────────────────────────
+docker-volumes/
+.docker/
+
+# ─── Terraform ───────────────────────────────────────────────────────────────
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+!*.tfvars.example
+
+# ─── Testing & Coverage ─────────────────────────────────────────────────────
+.coverage
+htmlcov/
+*.exec
+jacoco.exec
+
+# ─── Logs ────────────────────────────────────────────────────────────────────
+*.log
+*.log.*
+logs/
+
+# ─── OS Generated ───────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+*.swp
+*.swo
